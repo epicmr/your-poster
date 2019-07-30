@@ -8,7 +8,8 @@
     "van-col": "/static/dist/vant/col/index"
   },
   "pages": [
-    "pages/index/main"
+    "pages/index/main",
+    "pages/test/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

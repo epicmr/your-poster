@@ -1,11 +1,19 @@
 <template>
 <div>
-  <van-tabs swipeable animated @change="onClick">
-    <van-tab :title="index"  v-for="(item, index) in tabList" :key="index" :name="item"/>
+<div>
+  <van-tabs swipeable animated @change="onClick" :active="active">
+    <van-tab :title="item"  v-for="(item, index) in tabList" :key="index" :name="item"/>
   </van-tabs>
-  <van-col v-for="(item, index) in imgList" v-bind:key="index" span="9" offset="2" >
-<img class="img" :src="item"/>
-  </van-col>
+</div>
+      <swiper :duration="50" :style="'height:1000px'" @change="swiperChange" :current="currentTab" @animationfinish="onAnimationfinish">
+        <swiper-item  v-for="(item,index) in tabList" :key="index">
+<div>
+          <van-col v-for="(img,idx) in imgList" :key="idx" span="9" offset="2" >
+          <img class="img" :src="img"/>
+          </van-col>
+</div>
+        </swiper-item>
+      </swiper>
 </div>
 </template>
 <script>
@@ -13,6 +21,8 @@
     data() {
       return {
         active: 1,
+        winWidth:0,
+        winHeight: 0,
         imgList:[],
         imgList1: [
         "/static/images/3.jpg",
@@ -36,13 +46,34 @@
     methods: {
       onClick(event) {
         console.log(event);
-        if (title == "基金") {
+        let index = event.mp.detail.index
+        this.active = index
+        if (index == 0) {
           this.imgList = this.imgList1
-        } else {
+        } else if (index == 1) {
           this.imgList = this.imgList2
         }
-      }
+      },
+      swiperChange(e) {
+      this.active =e.mp.detail.current;;
+        console.log(this.active)
+    },
+    onAnimationfinish() {
+      console.log("滑动完成.....")
+      console.log(this.imgList)
     }
+    }, 
+          onLoad() {
+    var res = wx.getSystemInfoSync();
+    this.winWidth = res.windowWidth;
+    this.winHeight = res.windowHeight;
+      console.log(this.winHeight)
+  },
+     computed: {
+    contentHeight() {
+      return this.winHeight + "px";
+    }
+  },
   }
 </script>
 
