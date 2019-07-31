@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "painter": "/static/painter/painter",
+    "painter": "/static/dist/painter/painter",
     "van-button": "/static/dist/vant/button/index",
     "van-tabs": "/static/dist/vant/tabs/index",
     "van-tab": "/static/dist/vant/tab/index",

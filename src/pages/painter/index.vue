@@ -5,18 +5,25 @@
         <img class="img" :src="src" />
       </van-col>
     </van-row>-->
-    <painter :customStyle="customStyle" @imgOK="onImgOK" :palette="template" />
+    <painter
+      :customStyle="customStyle"
+      @imgOK="onImgOK"
+      @imgErr="onImgErr"
+      :palette="template"
+      dirty="true"
+    />
     <van-row>
       <button style="margin-top:40rpx" @click="genPoster">分享</button>
     </van-row>
     <van-popup :show="show" position="bottom" @close="onClose" close-on-click-overlay="true">
       <van-field
-        :value="phone"
+        :value="value"
         type="number"
         size="large"
         left-icon="phone-o"
         label="手机号"
         placeholder="请输入手机号"
+        @change="onChange"
         required
         autosize
         use-button-slot
@@ -35,7 +42,7 @@ export default {
     return {
       imgshow: true,
       src: "",
-      phone: "",
+      value: "",
       show: false,
       imagePath: "",
       customStyle: "",
@@ -43,17 +50,33 @@ export default {
     };
   },
   methods: {
+    onChange(event) {
+      // event.detail 为当前输入的值
+      console.log(event.mp.detail);
+      this.value = event.mp.detail;
+    },
+    onImgErr(e) {
+      console.log(e);
+    },
     onImgOK(e) {
+      console.log("value " + this.value);
       this.imagePath = e.mp.detail.path;
+      console.log("imgok " + this.imagePath);
+      let arr = [];
+      arr.push(this.imagePath);
+      if (this.value != "") {
+        wx.previewImage({
+          current: this.imagePath, // 当前显示图片的http链接
+          urls: arr // 需要预览的图片http链接列表
+        });
+        this.value = "";
+      }
     },
     genPoster() {
       this.show = true;
-      // wx.saveImageToPhotosAlbum({
-      //   filePath: this.imagePath
-      // });
     },
     onClickBtn() {
-      console.log(this.show);
+      console.log("确认生成...... " + this.src + " " + this.value);
       this.show = false;
       this.imgshow = false;
 
@@ -66,8 +89,9 @@ export default {
     }
   },
   onShow(options) {
+    console.log("args " + this.$root.$mp.query.avatar);
     this.src = this.$root.$mp.query.avatar;
-    this.onClickBtn();
+    //this.onClickBtn();
   }
 };
 </script>

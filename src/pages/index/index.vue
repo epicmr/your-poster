@@ -31,54 +31,54 @@ export default {
       winHeight: 0,
       imgList: [
         [
-          "/static/images/3.jpg",
-          "/static/images/4.jpg",
-          "/static/images/5.jpg",
-          "/static/images/6.jpg",
-          "/static/images/7.jpg",
-          "/static/images/8.jpg",
-          "/static/images/1.jpg",
-          "/static/images/2.jpg"
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/3.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/4.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/5.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/6.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/7.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/8.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/1.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/2.jpg"
         ],
         [
-          "/static/images/1.jpg",
-          "/static/images/2.jpg",
-          "/static/images/3.jpg",
-          "/static/images/4.jpg",
-          "/static/images/5.jpg",
-          "/static/images/6.jpg",
-          "/static/images/7.jpg",
-          "/static/images/8.jpg"
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/1.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/2.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/3.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/4.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/5.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/6.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/7.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/8.jpg"
         ],
         [
-          "/static/images/8.jpg",
-          "/static/images/2.jpg",
-          "/static/images/3.jpg",
-          "/static/images/4.jpg",
-          "/static/images/5.jpg",
-          "/static/images/6.jpg",
-          "/static/images/7.jpg",
-          "/static/images/1.jpg"
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/8.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/2.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/3.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/4.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/5.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/6.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/7.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/1.jpg"
         ],
         [
-          "/static/images/7.jpg",
-          "/static/images/6.jpg",
-          "/static/images/3.jpg",
-          "/static/images/4.jpg",
-          "/static/images/5.jpg",
-          "/static/images/2.jpg",
-          "/static/images/1.jpg",
-          "/static/images/8.jpg"
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/7.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/6.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/3.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/4.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/5.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/2.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/1.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/8.jpg"
         ],
         [
-          "/static/images/4.jpg",
-          "/static/images/5.jpg",
-          "/static/images/3.jpg",
-          "/static/images/1.jpg",
-          "/static/images/2.jpg",
-          "/static/images/6.jpg",
-          "/static/images/7.jpg",
-          "/static/images/8.jpg"
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/4.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/5.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/3.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/1.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/2.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/6.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/7.jpg",
+          "https://gstzy-test.oss-cn-shenzhen.aliyuncs.com/doctor/201707/24/8.jpg"
         ]
       ],
       tabList: ["活动", "基金", "理财", "证券", "保险"]
@@ -97,7 +97,6 @@ export default {
       console.log("滑动完成.....");
     },
     imgClick(src) {
-      console.log(src);
       wx.navigateTo({
         url: "../painter/main?avatar=" + src
       });

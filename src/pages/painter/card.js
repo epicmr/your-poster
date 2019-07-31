@@ -18,25 +18,28 @@ export default class LastMayday {
       height: '1000rpx',
       borderRadius: '20rpx',
       views: [{
-          type: 'qrcode',
-          content: '13268296729',
-          css: {
-            left: '250rpx',
-            bottom: '85rpx',
-            width: '160rpx',
-            height: '160rpx'
-          }
-        },
-        {
-          type: 'text',
-          text: '你的海报',
-          css: {
-            left: '50rpx',
-            top: '48rpx',
-            fontSize: '40rpx',
-            align: 'left'
-          }
+        type: 'qrcode',
+        content: 'weixin.gstyun.cn',
+        css: {
+          right: '40rpx',
+          bottom: '40rpx',
+          borderWidth: '2rpx',
+          borderColor: 'white',
+          background: "white",
+          width: '120rpx',
+          height: '120rpx'
         }
+      },
+      {
+        type: 'text',
+        text: '你的海报',
+        css: {
+          left: '50rpx',
+          top: '48rpx',
+          fontSize: '40rpx',
+          align: 'left'
+        }
+      }
       ]
     })
   }
