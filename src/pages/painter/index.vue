@@ -1,16 +1,16 @@
 <template>
   <div>
-    <!-- <van-row>
-      <van-col offset="2" span="20" :show="imgshow">
+    <van-row>
+      <van-col offset="2" span="20">
         <img class="img" :src="src" />
       </van-col>
-    </van-row>-->
+    </van-row>
     <painter
+      style="position: absolute;left: -1000px;"
       :customStyle="customStyle"
       @imgOK="onImgOK"
       @imgErr="onImgErr"
       :palette="template"
-      dirty="true"
     />
     <van-row>
       <button style="margin-top:40rpx" @click="genPoster">分享</button>
@@ -40,7 +40,7 @@ import Card from "./card";
 export default {
   data() {
     return {
-      imgshow: true,
+      btnClicked: false,
       src: "",
       value: "",
       show: false,
@@ -59,26 +59,27 @@ export default {
       console.log(e);
     },
     onImgOK(e) {
+      console.log(this.btnClicked);
       console.log("value " + this.value);
       this.imagePath = e.mp.detail.path;
       console.log("imgok " + this.imagePath);
       let arr = [];
       arr.push(this.imagePath);
-      if (this.value != "") {
+      if (this.btnClicked) {
         wx.previewImage({
           current: this.imagePath, // 当前显示图片的http链接
           urls: arr // 需要预览的图片http链接列表
         });
-        this.value = "";
       }
+      this.btnClicked = false;
     },
     genPoster() {
       this.show = true;
     },
     onClickBtn() {
+      this.btnClicked = true;
       console.log("确认生成...... " + this.src + " " + this.value);
       this.show = false;
-      this.imgshow = false;
 
       const card = new Card();
       const userInfo = {
@@ -102,5 +103,11 @@ export default {
   width: 100%;
   border: 1rem;
   box-shadow: 5px 2px 6px #000;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
 }
 </style>
