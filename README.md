@@ -1,28 +1,29 @@
 # your-poster
 
 > A Mpvue project
+> mpvue 快速入门五分钟教程传送门 http://mpvue.com/mpvue/quickstart.html
 
 ## Build Setup
 
 ``` bash
 # 初始化项目
-vue init mpvue/mpvue-quickstart myproject
-cd myproject
+https://github.com/epicmr/your-poster.git
+cd your-poster
 
 # 安装依赖
-yarn
+npm install
 
 # 开发时构建
-npm dev
+npm run dev
 
 # 打包构建
-npm build
+npm run build
 
 # 指定平台的开发时构建(微信、百度、头条、支付宝)
-npm dev:wx
-npm dev:swan
-npm dev:tt
-npm dev:my
+npm run dev:wx
+npm run dev:swan
+npm run dev:tt
+npm run dev:my
 
 # 指定平台的打包构建
 npm build:wx
