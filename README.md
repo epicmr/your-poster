@@ -9,12 +9,15 @@
 
 ``` bash
 # 初始化项目
-https://github.com/epicmr/your-poster.git
+git clone https://github.com/epicmr/your-poster.git
 cd your-poster
 
-#安装依赖van-weapp ui
+#安装painter
+git submodule add https://github.com/Kujiale-Mobile/PainterCore.git static/dist/painter
 
-#安装依赖painter
+#安装 van-weapp ui
+git clone https://github.com/youzan/vant-weapp.git
+将其中dist 文件夹重命名为 vant，复制到 static/dist/ 里面
 
 # 安装依赖
 npm install
@@ -38,7 +41,9 @@ npm build:tt
 npm build:my
 
 # 导入项目到微信开发者工具即可运行
-记得开启es6 转 es5
+记得开启
+es6 转 es5
+不校验合法域名
 
 # 生成 bundle 分析报告
 npm run build --report
